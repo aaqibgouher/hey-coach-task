@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "0ff1d3cf-ba8b-4ca2-9c7a-4da96a301cc3",
+		"name": "hey-coach-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17953118",
+		"_collection_link": "https://crimson-trinity-429126.postman.co/workspace/My-Workspace~81f6d802-35ca-4242-846d-ed871d527d76/collection/17953118-0ff1d3cf-ba8b-4ca2-9c7a-4da96a301cc3?action=share&source=collection_link&creator=17953118"
+	},
+	"item": [
+		{
+			"name": "onboarding parking lot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"first\",\n    \"totalSlots\": 12,\n    \"sizes\": [\"SMALL\", \"LARGE\", \"MEDIUM\", \"XL\"],\n    \"totalFloors\": 3,\n    \"floors\": [\n        {\n            \"floorNo\": 1,\n            \"totalSlots\": 1,\n            \"slots\": [\n                {\n                    \"label\": \"SMALL\",\n                    \"totalSlots\": 1\n                },\n                {\n                    \"label\": \"LARGE\",\n                    \"totalSlots\": 1\n                },\n                {\n                    \"label\": \"MEDIUM\",\n                    \"totalSlots\": 1\n                },\n                {\n                    \"label\": \"XL\",\n                    \"totalSlots\": 1\n                }\n            ]\n        },\n        {\n            \"floorNo\": 2,\n            \"totalSlots\": 1,\n            \"slots\": [\n                {\n                    \"label\": \"SMALL\",\n                    \"totalSlots\": 1\n                },\n                {\n                    \"label\": \"LARGE\",\n                    \"totalSlots\": 1\n                },\n                {\n                    \"label\": \"MEDIUM\",\n                    \"totalSlots\": 1\n                },\n                {\n                    \"label\": \"XL\",\n                    \"totalSlots\": 1\n                }\n            ]\n        },\n        {\n            \"floorNo\": 3,\n            \"totalSlots\": 1,\n            \"slots\": [\n                {\n                    \"label\": \"SMALL\",\n                    \"totalSlots\": 1\n                },\n                {\n                    \"label\": \"LARGE\",\n                    \"totalSlots\": 1\n                },\n                {\n                    \"label\": \"MEDIUM\",\n                    \"totalSlots\": 1\n                },\n                {\n                    \"label\": \"XL\",\n                    \"totalSlots\": 1\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/onboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"onboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allocate parking to car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lotId\": \"65b79ce8d20be12f8a4d8df9\",\n    \"carSize\": \"SMALL\",\n    \"carNo\": \"KA-1202\",\n    \"from\": \"2024-01-29T08:18:57.540+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/parking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deallocate parking for a car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookingId\": \"65b7a16940e71d999ef1439a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/parking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get lots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/lots",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"lots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get lot by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/lots/65b79ce8d20be12f8a4d8df9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"lots",
+						"65b79ce8d20be12f8a4d8df9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
