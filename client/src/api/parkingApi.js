@@ -2,7 +2,8 @@ import axios from "axios";
 
 const apiService = axios.create({
   baseURL:
-    "https://hey-coach-task-server.vercel.app" || "http://localhost:3000/api",
+    "https://hey-coach-task-server.vercel.app/api" ||
+    "http://localhost:3000/api",
 });
 
 export const getLotsApi = async () => {
